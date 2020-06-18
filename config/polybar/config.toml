@@ -1,0 +1,5 @@
+You have to get your own api key and city id from https://openweathermap.org/
+
+api_key = ""
+city_id = ""
+display = "{{ temp_icon }} {{ temp_celcius }}°C {{ trend }} {{ forecast_icon }} {{ forecast_celcius }}°C"
