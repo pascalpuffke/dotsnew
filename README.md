@@ -14,6 +14,10 @@ also my terminal of choice is a slightly modified version of [luke smith's st fo
 - compton
 - neovim
 
+## recommended:
+- [st](https://github.com/lukesmithxyz/st), also integrates perfectly with pywal
+- [blurredfox firefox theme](https://github.com/manilarome/blurredfox)
+
 ## installation
 i'll give better instructions later, but for now copy the contents of my config folder to yours and change the config.toml file found at config/polybar/ if you want to display the weather.
 this rice is entirely based around the awesome pywal tool, so make sure to use that
