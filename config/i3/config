@@ -203,7 +203,7 @@ assign [class="lutris"] $ws6
 assign [class="st"] $ws2
 
 # executing a few of them automatically
-exec waterfox
+exec firefox
 exec st
 
 exec_always --no-startup-id autotiling
