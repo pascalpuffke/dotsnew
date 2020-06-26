@@ -41,6 +41,7 @@ bindsym $mod+c kill
 # start dmenu (a program launcher)
 # jk its rofi
 bindsym $mod+d exec rofi -show run -modi run
+bindsym $mod+Shift+d exec rofi -modi "Global Search":"~/.config/rofi/rofi-spotlight/rofi-spotlight.sh" -show "Global Search" \ -config ~/.config/rofi/rofi-spotlight/rofi.rasi
 
 bindsym $mod+j focus left
 bindsym $mod+k focus down
