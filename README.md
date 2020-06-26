@@ -18,6 +18,8 @@ also my terminal of choice is a slightly modified version of [luke smith's st fo
 - standard i3 bindings for everything else
 - mod+return open st
 - mod+c close focused window
+- mod+d open rofi (execute)
+- mod+shift+d open rofi-spotlight (global search)
 - mod+y increase gaps by 5px
 - mod+shift+y decrease gaps by 5px
 - for st key binds, see [here](https://github.com/LukeSmithxyz/st/blob/master/README.md)
