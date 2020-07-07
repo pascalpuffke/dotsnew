@@ -1,0 +1,33 @@
+call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/tpope/vim-sensible'
+Plug 'dylanaraps/wal.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-airline/vim-airline'
+call plug#end()
+
+colorscheme wal
+
+set number
+set linebreak
+set showbreak=+++
+set textwidth=100
+set showmatch
+set visualbell
+
+set hlsearch
+set smartcase
+set ignorecase
+set incsearch
+ 
+set autoindent
+set shiftwidth=4
+set smartindent	
+set smarttab
+set softtabstop=4
+ 
+set ruler
+set clipboard+=unnamedplus
+
+set undolevels=1000
+set backspace=indent,eol,start
