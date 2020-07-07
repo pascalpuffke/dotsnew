@@ -18,6 +18,7 @@ also my terminal of choice is a slightly modified version of [luke smith's st fo
 - standard i3 bindings for everything else
 - mod+return open st
 - mod+c close focused window
+- jkl; changed to hjkl (vim keys)
 - mod+d open rofi (execute)
 - mod+shift+d open rofi-spotlight (global search)
 - mod+y increase gaps by 5px
