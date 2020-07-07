@@ -8,6 +8,7 @@
 # ---
 set $mod Mod4
 set $term st
+set $browser firefox
 floating_modifier $mod
 
 set $ws1 "1"
@@ -147,8 +148,8 @@ assign [class="lutris"] $ws6
 assign [class="st"] $ws2
 
 # executing a few of them automatically
-exec firefox
-exec st
+exec $browser
+exec $term
 
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id compton --backend glx --blur-method kawase --blur-strength 15 --vsync opengl-swc --unredir-if-possible
@@ -165,6 +166,7 @@ exec --no-startup-id nm-applet
 # ---
 # disable window titlebars, add 1px border
 for_window [class=".*"] border pixel 1
+# needed for betterdiscord themes
 for_window [class="discord"] border pixel 0
 new_window pixel
 
