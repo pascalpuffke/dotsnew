@@ -1,7 +1,22 @@
 pfetch
 
+set comp "gcc -std=gnu17 -Wall -O3 -march=native -fdata-sections -ffunction-sections"
+
+alias search "yay -Ss"
+alias install "yay -S"
+alias remove "yay -Rns"
+alias pkginfo "yay -Qi"
+alias searchlocal "pacman -Q | grep"
+alias pls "sudo"
+alias jrun "/usr/lib/jvm/java-14-openjdk/bin/java --enable-preview -jar"
+alias wall "sh ~/.local/src/scripts/wallpaper.sh"
 alias exa "exa --all --long"
+alias cat "bat"
 alias weather "curl wttr.in"
+alias ccomp "echo $comp & $comp"
+
+fish_vi_key_bindings
+set -U fish_mode_prompt
 
 set -U grc_plugin_execs cat cvs df diff dig gcc g++ ls ifconfig \
        make mount mtr netstat ping ps tail traceroute \

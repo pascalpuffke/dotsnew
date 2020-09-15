@@ -35,20 +35,20 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = agave Nerd Font:pixelsize=10;1
+font-0 = Ubuntu Mono:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = Weather Icons:size=10;0
 
 modules-left = i3
 modules-center = cmus-custom
-modules-right = memory cpu temperature weather date powermenu
+modules-right = kernel memory cpu temp-custom weather date 
 
 tray-position = right
-tray-padding = 2
+tray-padding = 1
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
-;wm-restack = i3
+wm-restack = i3
 
 ;override-redirect = true
 
@@ -60,6 +60,12 @@ tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/kernel]
+type = custom/script
+exec = uname -r
+interval = 600
+format-underline = ${colors.color5} 
 
 [module/weather]
 type = custom/script
@@ -75,6 +81,12 @@ exec = ~/.config/polybar/cmus.sh
 interval = 1
 format-underline = ${colors.color3}
 
+[module/temp-custom]
+type = custom/script
+exec = sensors | awk '/^Tdie/ {print $2}'
+interval = 1
+format-underline = ${colors.color3}
+
 [module/filesystem]
 type = internal/fs
 interval = 25
@@ -84,7 +96,7 @@ mount-0 = /
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
-format-underline = ${colors.color4}
+format-underline = ${colors.color7}
 
 [module/i3]
 type = internal/i3
@@ -126,7 +138,6 @@ label-urgent-padding = 2
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.primary} 
 label = %percentage:2%%
@@ -137,7 +148,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.secondary} 
-label = %gb_free% / %gb_total% 
+label = %gb_used% / %gb_total% 
 
 [module/date]
 type = internal/date

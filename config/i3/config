@@ -25,7 +25,7 @@ set $ws10 "10"
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 
-font pango:Agave Nerd Font 11
+font pango:Ubuntu Mono 11
 
 # ---
 # Keybindings
@@ -36,7 +36,7 @@ bindsym XF86AudioMute		exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ t
 bindsym XF86AudioMicMute	exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym $mod+Return		exec $term
 bindsym $mod+c			kill
-bindsym $mod+d			exec rofi -show run -modi run
+bindsym $mod+d  		exec rofi -show run -modi run
 bindsym $mod+Shift+d		exec rofi -modi "Global Search":"~/.config/rofi/rofi-spotlight/rofi-spotlight.sh" -show "Global Search" \ -config ~/.config/rofi/rofi-spotlight/rofi.rasi
 bindsym $mod+h			focus left
 bindsym $mod+j			focus down
@@ -166,7 +166,6 @@ exec --no-startup-id nm-applet
 # ---
 # disable window titlebars, add 1px border
 for_window [class=".*"] border pixel 1
-# needed for betterdiscord themes
 for_window [class="discord"] border pixel 0
 new_window pixel
 

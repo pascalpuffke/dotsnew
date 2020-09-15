@@ -38,5 +38,5 @@ function fish_prompt
   echo
 
   # Line 2
-  echo -n $cyan'└'$__fish_prompt_char $normal
+  echo -n $cyan'    └'$__fish_prompt_char $normal
 end
