@@ -4,7 +4,7 @@ also my terminal of choice is a slightly modified version of [luke smith's st fo
 
 ## screenshot
 ![preview](preview.png)
-(thank you spectacle btw)
+(wallpaper art by [devin elle kurtz](https://www.patreon.com/devinellekurtz))
 
 ## configs for:
 - i3-gaps wm
@@ -13,6 +13,12 @@ also my terminal of choice is a slightly modified version of [luke smith's st fo
 - fish
 - compton
 - neovim
+
+## other supported software
+make sure to set the 'DIR' variable in the wallpaper.sh script. if the script is located at ~/.local/src/scripts/wallpaper.sh, a simple 'wall' in the fish shell will change the wallpaper, generate a color scheme and apply it to some applications automatically.
+- vs code with [xresources-theme](https://marketplace.visualstudio.com/items?itemName=JackVandergriff.xresources-theme)
+- telegram with [telegram-palette-gen](https://github.com/agnipau/telegram-palette-gen)
+- recommended to use [blurredfox theme](https://github.com/manilarome/blurredfox)
 
 ## key bindings
 - standard i3 bindings for everything else
@@ -46,13 +52,11 @@ recommended packages:
 step 1: install at least all the required packages, a terminal of your choice etc.
 
 step 2: if you're not using st, change the line 'bindsym $mod+Return exec st' to your preferred terminal emulator.
-also if you don't want to use autotiling, you have to delete the line 'exec_always --no-startup-id autotiling'
+also if you don't want to use autotiling, you have to delete the line 'exec_always --no-startup-id autotiling'. optionally set the 'DIR' variable in scripts/wallpaper.sh to your wallpaper directory and put the script in ~/.local/src/scripts/wallpaper.sh
 
-step 3: you probably also want to change some keybindings
-
-step 4: copy the contents of the config folder to your own .config folder.
+step 3: copy the contents of the config folder to your own .config folder.
 ```
 $ cp -r config/ ~/.config
 ```
 
-step 5: profit
+step 4: profit
